@@ -1,5 +1,5 @@
 function main() {
-  const canvas = document.getElementById("myCanvas"); // Assuming 'myCanvas' is the ID of your canvas
+  const canvas = document.getElementById("myCanvas"); 
   const ctx = canvas.getContext("2d");
 
   function resizeCanvas() {
@@ -39,13 +39,13 @@ function main() {
     }
   }
 
-  const bars = []; // Changed 'Bars' to start with an empty array
+  const bars = [];
   let barsWidth = canvas.width / 256;
 
   function createBars() {
     for (let i = 0; i < 256; i++) {
       let color = "hsl(" + i * 2 + ",100%,50%)";
-      bars.push(new Bar(i * barsWidth, canvas.height / 2, 1, 20, color, i)); // Adjusted position and size of bars
+      bars.push(new Bar(i * barsWidth, canvas.height / 2, 1, 20, color, i)); 
     }
   }
   createBars();
